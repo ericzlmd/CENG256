@@ -26,5 +26,9 @@ $(document).ready(function() {
          $("label#phone").focus();
          return false;
       }
+
+      var dataString = "name=" + name + "&email=" + email + "&phone=" + phone;
+      alert(dataString);
+      return false;
    });
 });
