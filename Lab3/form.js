@@ -60,3 +60,11 @@ function checkPasswordLength(pwd) {
    }
    return check;
 }
+
+// no numbers field!
+function checkNoNumbers(word) {
+   for(var x = 0; x < word.length; x++) {
+      if(word[x] >= 0 && word[x]<= 9) return false;
+   }
+   return true;
+}
