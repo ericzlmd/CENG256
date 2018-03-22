@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Objects</title>
+
+   <!-- javascript -->
+   <script>
+      function makePSU() {
+         var makes = ["EVGA", "Corsair", "Cooler Master", "Seasonic", "Thermaltake"];
+         var watts = [400, 500, 600, 700, 1000];
+         var mods = [true, false];
+         
+         var rand1 = Math.floor(Math.random() * makes.length);
+         var rand2 = Math.floor(Math.random() * watts.length);
+         var rand3 = Math.floor(Math.random() * 2);
+
+         var psu = {
+            make: makes[rand1],
+            watt: watts[rand2],
+            mod: mods[rand3]
+         };
+         return psu;
+      }
+
+      function displayPSU(psu) {
+         console.log("Make: " + psu.make + " Wattage: " + psu.watt + " Modular: " + psu.mod);
+      }
+
+      var ps1 = makePSU();
+      displayPSU(ps1);
+
+      var ps2 = makePSU();
+      displayPSU(ps2);
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
